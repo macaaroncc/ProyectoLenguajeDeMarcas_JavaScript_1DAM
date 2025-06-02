@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión - Vibrafest 2025</title>
+    <link rel="stylesheet" href="./Style/styleLogin.css">
+</head>
+
+<body onload="prepararLogin()">
+    <header>
+        <div class="header-content-row">
+            <a href="index.html">
+                <img src="./img/Logo.png" alt="Logo Vibrafest" class="logo-grande" />
+            </a>
+            <a href="index.html" class="titulo-logo">VIBRAFEST 2025</a>
+        </div>
+    </header>
+
+    <!--  Video de fondo -->
+    <div class="video-fondo">
+        <iframe
+            src="https://www.youtube.com/embed/1Of7tzR9be8?autoplay=1&mute=1&loop=1&playlist=1Of7tzR9be8&controls=0&modestbranding=1"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+    </div>
+
+    <main class="hero-section">
+        <div class="glass-card">
+            <h2>Iniciar sesión</h2>
+
+            <form id="loginForm">
+                <input type="text" id="usuario" placeholder="Usuario" required />
+                <input type="password" id="contrasena" placeholder="Contraseña" required />
+                <p id="mensajeError" class="error-text"></p>
+                <a href="menu.html">
+                    <button type="submit" class="btn-entrar">Entrar</button>
+                </a>
+            </form>
+
+            <p style="margin-top: 1rem;">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+        </div>
+    </main>
+
+    <script src="./Style/JavaS.js"></script>
+</body>
+
+</html>

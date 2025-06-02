@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Perfil - Vibrafest 2025</title>
+  <link rel="stylesheet" href="./Style/styleperfil.css" />
+</head>
+
+<body onload="mostrarPerfil()">
+
+  <!-- Fondo de video -->
+  <div class="video-fondo">
+    <iframe
+      src="https://www.youtube.com/embed/1Of7tzR9be8?autoplay=1&mute=1&loop=1&playlist=1Of7tzR9be8&controls=0&modestbranding=1"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content-row">
+      <a href="index.html">
+        <img src="./img/Logo.png" alt="Logo Vibrafest" class="logo-grande" />
+      </a>
+      <a href="index.html" class="titulo-logo">VIBRAFEST 2025</a>
+    </div>
+  </header>
+
+
+  <!-- Navegación -->
+  <nav class="nav-bar">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="./menu.html">🎵 Grupos</a>
+    <a href="perfil.html">👤 Perfil</a>
+  </nav>
+
+  <!-- Perfil -->
+  <main class="hero-section fade-in">
+    <div class="glass-card">
+      <h2>👤 Mi Perfil</h2>
+      <p><strong>Nombre:</strong> <span id="perfil-nombre">-</span></p>
+      <p><strong>Correo:</strong> <span id="perfil-email">-</span></p>
+      <p><strong>Usuario:</strong> <span id="perfil-usuario">-</span></p>
+
+      <br />
+      <button onclick="cerrarSesion()" class="btn-entrar">Cerrar sesión</button>
+    </div>
+  </main>
+
+  <script src="./Style/JavaS.js"></script>
+</body>
+
+</html>

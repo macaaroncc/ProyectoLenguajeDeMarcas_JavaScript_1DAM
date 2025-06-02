@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú - Vibrafest 2025</title>
+  <link rel="stylesheet" href="./Style/styleMenu.css" />
+</head>
+
+<body onload="cargarGrupos()">
+  <!-- Header -->
+  <header>
+    <div class="header-content-row">
+      <a href="index.html">
+        <img src="./img/Logo.png" alt="Logo Vibrafest" class="logo-grande" />
+      </a>
+      <a href="index.html" class="titulo-logo">VIBRAFEST 2025</a>
+    </div>
+  </header>
+  <!--  Video de fondo -->
+  <div class="video-fondo">
+    <iframe
+      src="https://www.youtube.com/embed/1Of7tzR9be8?autoplay=1&mute=1&loop=1&playlist=1Of7tzR9be8&controls=0&modestbranding=1"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Navegación -->
+  <nav class="nav-bar">
+    <a href="./index.html" onclick="cerrarSesion()">🏠 Inicio</a>
+    <a href="./menu.html">🎵 Grupos</a>
+    <a href="perfil.html">👤 Perfil</a>
+  </nav>
+
+  <div class="video-fondo">
+    <iframe
+      src="https://www.youtube.com/embed/0eHvv77LqYU?autoplay=1&mute=1&loop=1&playlist=0eHvv77LqYU&controls=0&modestbranding=1"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+
+  <section class="fiesta">
+    <img src="./img/Grupo1.jpg.crdownload" alt="Grupo 1" />
+    <img src="./img/Grupo2.jpg.crdownload" alt="Grupo 2" />
+    <img src="./img/Grupo3.jpg.crdownload" alt="Grupo 3" />
+  </section>
+
+  <!-- Tarjetas dinámicas -->
+  <main>
+    <h2 class="seccion-titulo">Artistas Destacados</h2>
+    <div class="carrusel-contenedor">
+      <button class="carrusel-btn izquierda" onclick="moverCarrusel(-1)">❮</button>
+      <div id="carrusel" class="carrusel">
+        <!-- Tarjetas se insertan aquí desde JS -->
+      </div>
+      <button class="carrusel-btn derecha" onclick="moverCarrusel(1)">❯</button>
+    </div>
+
+  </main>
+  <footer>
+    <p>&copy; 2025 VIBRAFEST • Diseñado por el equipo PURPURINA</p>
+  </footer>
+
+  <script src="./Style/JavaS.js"></script>
+</body>
+
+</html>

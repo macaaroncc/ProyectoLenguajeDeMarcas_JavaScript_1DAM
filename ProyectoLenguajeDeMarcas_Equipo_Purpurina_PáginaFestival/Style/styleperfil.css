@@ -1,0 +1,338 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+  background-color: black;
+}
+
+/*  Fondo de video */
+.video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-fondo iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77vh;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffff, #00cc66, #ffcc00, #ff3366);
+  background-size: 1200% 1200%;
+  animation: fiestaBackground 20s ease infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fiestaBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.header-content-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.logo-grande {
+  width: 120px;
+  height: auto;
+  margin-left: -140px;
+}
+
+.titulo-logo {
+  font-size: 2.2rem;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  margin-left: 400px;
+}
+
+.titulo-logo:hover {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  margin-left: -40px;
+}
+
+.nav-bar a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 8px;
+}
+
+.nav-bar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Contenido principal */
+.hero-section {
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.glass-card p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.perfil-foto {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
+
+/* Botones */
+.botones-perfil {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.botones-perfil button {
+  background: #7b2cbf;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.botones-perfil button:hover {
+  background: #a55eea;
+  transform: scale(1.05);
+}
+
+.btn-entrar {
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 200, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-entrar:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #3333ff, #00ffff);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* CABECERA - solo logo visible */
+  .header-content-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .titulo-logo {
+    display: none;
+  }
+
+  .logo-grande {
+    width: 90px;
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  /* TARJETA PRINCIPAL */
+  .glass-card {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .glass-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .glass-card p {
+    font-size: 1rem;
+  }
+
+  .perfil-foto {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* BOTONES */
+  .botones-perfil {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .botones-perfil button,
+  .btn-entrar {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* NAVBAR */
+  .nav-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+    padding: 0.8rem;
+  }
+
+  .nav-bar a {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo-grande {
+        width: 100px;
+        margin-left: 0;
+    }
+
+    .titulo-logo {
+        font-size: 1.8rem;
+        margin-left: 100px;
+        text-align: left;
+    }
+
+    .header-content-row {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    header {
+        padding: 1.2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 2rem;
+    }
+
+    .glass-card {
+        max-width: 80%;
+        padding: 2rem;
+    }
+
+    .glass-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .eslogan {
+        font-size: 1.2rem;
+    }
+
+    .fecha {
+        font-size: 1rem;
+    }
+
+    .btn-entrar {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+        width: auto;
+    }
+
+    .mapa-container {
+        width: 95%;
+    }
+
+    .mapa-container iframe {
+        height: 300px;
+    }
+
+    footer {
+        font-size: 0.85rem;
+        padding: 0.8rem;
+    }
+}
